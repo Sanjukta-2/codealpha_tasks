@@ -1,0 +1,14 @@
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.datasets import mnist
+import matplotlib.pyplot as plt
+
+# Load dataset
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+# Display sample images
+fig, axes = plt.subplots(1, 5, figsize=(10, 5))
+for i, ax in enumerate(axes):
+    ax.imshow(x_train[i], cmap='gray')
+    ax.axis('off')
+plt.show()
